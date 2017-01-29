@@ -1,0 +1,23 @@
+<div class="container">
+ <h3>Product details</h3>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="text-center">Sku</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Price</th>
+        <th class="text-center">Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{product.sku}}</td>
+        <td>{{product.name}}</td>
+        <td class="text-right">{{product.price / 100 | currency:'USD':true:'2.2'}}</td>
+        <td class="text-right">{{product.createdAt | date: 'y-MM-dd HH:mm'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-danger pull-right" (click)="doRemove()"><span class="glyphicon glyphicon-trash"></span> Remove</button>
+  <button class="btn btn-success" [routerLink]="['/products', product.id, 'edit']"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+</div>
