@@ -14,3 +14,5 @@ ng serve
 
 Login: login
 Password: password
+
+[Live demo] (https://panprofit.github.io/angular2)
